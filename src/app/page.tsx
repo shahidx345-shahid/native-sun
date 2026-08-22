@@ -1,65 +1,72 @@
 import Image from "next/image";
+import Link from "next/link";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col">
+      {/* Welcome Intro Section */}
+      <div>
+        <Image src="/images/HOME_WELCOME-INTRO_08.png" alt="Welcome Intro" width={979} height={139} priority />
+        
+        <div className="flex">
+          <Image src="/images/HOME_WELCOME-INTRO_08_A.png" alt="Spacer" width={173} height={22} priority />
+          <Link href="/portfolio" className="block" style={{ width: 86, height: 22 }}>
+            <Image src="/images/HOME_WELCOME-INTRO_08_B_NATURAL.png" alt="View Portfolio" width={86} height={22} priority />
+          </Link>
+          <Image src="/images/HOME_WELCOME-INTRO_08_C.png" alt="Spacer" width={720} height={22} priority />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <Image src="/images/HOME_WELCOME-INTRO_08_D.png" alt="Spacer bottom" width={979} height={37} priority />
+      </div>
+
+      {/* Hero Slider */}
+      <HeroSlider />
+
+      {/* Services Section Marker */}
+      <div id="services">
+        <Image src="/images/HOME_11.png" alt="Services Separator" width={979} height={93} />
+      </div>
+
+      {/* Featured Projects / Middle Content */}
+      <Image src="/images/INDEX_HOME_01.png" alt="Spacer" width={979} height={96} />
+      
+      <div className="flex">
+        <Image src="/images/INDEX_HOME_02.png" alt="Spacer" width={111} height={214} />
+        
+        <Link 
+          href="/portfolio" 
+          className="group relative block bg-[#FFFFFF] border border-[#E5E7EB] hover:shadow-lg transition-all duration-300 overflow-hidden" 
+          style={{ width: 256, height: 214 }}
+        >
+          <Image src="/images/INDEX_HOME_03_BUTTON_NATURAL.png" alt="Baypop Project" width={256} height={214} className="absolute inset-0 group-hover:opacity-0 transition-all duration-300" />
+          <Image src="/images/INDEX_HOME_03_BUTTON_OVER.png" alt="Baypop Project" width={256} height={214} className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        </Link>
+
+        <Link 
+          href="/portfolio" 
+          className="group relative block bg-[#FFFFFF] border border-[#E5E7EB] hover:shadow-lg transition-all duration-300 overflow-hidden" 
+          style={{ width: 245, height: 214 }}
+        >
+          <Image src="/images/INDEX_HOME_04_BUTTON_NATURAL.png" alt="PCB Project" width={245} height={214} className="absolute inset-0 group-hover:opacity-0 transition-all duration-300" />
+          <Image src="/images/INDEX_HOME_04_BUTTON_OVER.png" alt="PCB Project" width={245} height={214} className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        </Link>
+
+        <Link 
+          href="/portfolio" 
+          className="group relative block bg-[#FFFFFF] border border-[#E5E7EB] hover:shadow-lg transition-all duration-300 overflow-hidden" 
+          style={{ width: 256, height: 214 }}
+        >
+          <Image src="/images/INDEX_HOME_05_BUTTON_NATURAL.png" alt="FIME Project" width={256} height={214} className="absolute inset-0 group-hover:opacity-0 transition-all duration-300" />
+          <Image src="/images/INDEX_HOME_05_BUTTON_OVER.png" alt="FIME Project" width={256} height={214} className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        </Link>
+
+        <Image src="/images/INDEX_HOME_06.png" alt="Spacer" width={111} height={214} />
+      </div>
+
+      <Image src="/images/INDEX_HOME_07.png" alt="Spacer" width={979} height={96} />
+      <Image src="/images/INDEX_HOME_08.png" alt="Services Details" width={979} height={259} />
+      </div>
   );
 }
+
