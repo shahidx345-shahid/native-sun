@@ -32,7 +32,7 @@ export default function Header() {
       </div>
 
       {/* Navigation Row */}
-      <nav className="flex justify-center items-center gap-12 border-y border-[#E5E7EB] bg-white py-2 uppercase rounded-sm">
+      <nav className="flex justify-center items-center gap-12 py-2 uppercase">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/portfolio">Portfolio</NavLink>
         <NavLink href="/services">Services</NavLink>

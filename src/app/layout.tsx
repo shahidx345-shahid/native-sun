@@ -19,18 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body 
-        className={`min-h-full flex flex-col bg-[#EAEAEA] ${inter.className}`} 
+      <body
+        className={`min-h-full flex flex-col bg-[#F7F7F7] ${inter.className}`}
         style={{
-          backgroundImage: 'linear-gradient(to bottom, #D8D8D8 0px, #EAEAEA 180px)',
-          backgroundRepeat: 'no-repeat'
+          backgroundColor: '#F7F7F7',
         }}
         suppressHydrationWarning
       >
         <TopStripe />
         <Header />
         <main className="flex-1">
-          <div className="native-container bg-transparent shadow-sm min-h-screen">
+          <div className="native-container bg-transparent shadow-none min-h-screen">
             {children}
           </div>
         </main>
